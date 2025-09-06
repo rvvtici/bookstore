@@ -1,0 +1,106 @@
+:root {
+    --container-color:rgb(81, 95, 81);
+}
+
+* {
+    background-color: black; /*rgb(211, 193, 144);*/
+    color: white;
+    font-family:'Palatino Linotype'
+    /* 'Montserrat'; */
+}
+
+/* header */
+header div{
+    display:flex;
+    flex-direction: row;
+    justify-content:center; /*space-between*/
+    padding-left: 10px;
+    padding-right: 10px;
+    /* padding: 50px; */
+    /* background-color: aquamarine; */
+}
+
+#nav-center {
+    padding: 26px;
+}
+
+#nav-right {
+    padding-top: 38px;
+}
+
+
+
+
+
+/* main */
+main {
+    padding: 20px;
+}
+/* 
+.container {
+  display: flex;
+    flex-direction: row;  
+}
+
+.product-img img{
+    width: 200px;
+}
+
+.product-info * {
+    padding: 0px;
+    margin: 0px;
+} */
+
+.product-list-container .product-container {
+    background-color: var(--container-color);
+    padding: 30px;
+}
+
+.product-container * {
+    padding: 0px;
+    margin: 0px;
+    width: 200px;
+    /* text-align: center; */
+    background-color: var(--container-color);
+}
+
+.product-container .book-title{
+    font-size:18px;
+    text-decoration: underline;
+}
+
+.product-container .book-author{
+    color: rgb(156, 156, 156);
+    /* text-decoration: none; */
+}
+
+.product-container .book-author, .book-price {
+    font-size: 13px;
+}
+
+
+
+.product-list-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* background-color: rgb(26, 83, 31); */
+    /* margin-right: 600px;
+    margin-left: 600px; */
+}
+
+footer p {
+    text-decoration: none;
+    padding: 0px;
+    margin: 0;
+}
