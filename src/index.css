@@ -1,0 +1,6 @@
+/* Remove margens e padding padrões do navegador */
+html,
+body {
+  margin: 0 0;
+  padding: 0 0;
+}
