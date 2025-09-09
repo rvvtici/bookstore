@@ -40,7 +40,7 @@ const Home = () => {
               <h3 className="book-title">O Retrato de Dorian Gray</h3>
             </a>
             <h4 className="book-author">Oscar Wilde</h4>
-            <p classNameName="book-price">R$ 50</p>
+            <p className="book-price">R$ 50</p>
           </div>
         </div>
 

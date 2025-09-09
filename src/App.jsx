@@ -23,7 +23,7 @@ function App() {
           <Route path="/admin" element={<Admin />} />
           <Route path="/database" element={<Database />} />
           <Route path="/create" element={<CreateDatabase />} />
-          <Route path="/update" element={<UpdateDatabase />} />
+          <Route path="/update/:id" element={<UpdateDatabase />} />
         </Routes>
       </BrowserRouter>
     </div>
