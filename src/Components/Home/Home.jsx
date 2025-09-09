@@ -1,61 +1,67 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Header from "../Header/Header.jsx";
+import Footer from "../Footer/Footer.jsx";
 import "./teste.css";
 
 const Home = () => {
+  const products = [
+    {
+      id: 1,
+      title: "O Retrato de Dorian Gray",
+      author: "Oscar Wilde",
+      price: "R$ 50",
+      img: "dorian_gray.png",
+      link: "/books/oscar-wilde/dorian",
+    },
+    {
+      id: 2,
+      title: "Dom Quixote",
+      author: "Miguel de Cervantes",
+      price: "R$ 60",
+      img: "dom_quixote.png",
+      link: "/books/domquixote",
+    },
+    {
+      id: 3,
+      title: "1984",
+      author: "George Orwell",
+      price: "R$ 45",
+      img: "1984.png",
+      link: "/books/1984",
+    },
+  ];
+
   return (
     <div className="home">
-      <header>
-        <div id="nav-left">
-          <img src="favicon-96x96.png" alt="logo" />
-          <h1>rav's sebo</h1>
-        </div>
-        <div id="nav-center">
-          <input type="text" placeholder="search" />
-          <button type="submit">submit</button>
-        </div>
-        <div id="nav-right">
-          <i className="fa-solid fa-user"></i>
-        </div>
-      </header>
+      <Header />
 
       <main>
-        <div id="bestsellers">{/*  */}</div>
-
         <div className="product-list-container">
-          {/* mongodb, carousel */}
           <div className="product-list-header">
             <h2 className="product-list-title">New Additions</h2>
             <a href="/books">
-              <button type="see-more">see more</button>
+              <button type="see-more">See More</button>
             </a>
           </div>
 
-          <div className="product-container">
-            <div className="product-img">
-              <img src="dorian_gray.png" alt="dorian_gray" />
-            </div>
-
-            <a href="/books/dorian">
-              <h3 className="book-title">O Retrato de Dorian Gray</h3>
-            </a>
-            <h4 className="book-author">Oscar Wilde</h4>
-            <p className="book-price">R$ 50</p>
+          <div className="product-grid">
+            {products.map((product) => (
+              <div key={product.id} className="product-container">
+                <div className="product-img">
+                  <img src={product.img} alt={product.title} />
+                </div>
+                <a href={product.link}>
+                  <h3 className="book-title">{product.title}</h3>
+                </a>
+                <h4 className="book-author">{product.author}</h4>
+                <p className="book-price">{product.price}</p>
+              </div>
+            ))}
           </div>
         </div>
-
-        <div id="promo">{/*  */}</div>
       </main>
 
-      <footer>
-        <p>contact:</p>
-        <p>(11) 94842-3878</p>
-        <p>rvvtici@gmail.com</p>
-        <a href="https://linkedin.com/in/rvvtici">linkedin</a>
-        <a href="https://github.com/rvvtici">github</a>
-        <a href="">portfolio</a>
-        <h3>© rvvtici / ravtcm</h3>
-      </footer>
+      <Footer />
     </div>
   );
 };
